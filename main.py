@@ -2,7 +2,7 @@ from typing import List
 
 def path_to_file_list(path: str) -> List[str]:
     """Reads a file and returns a list of lines in the file"""
-    # Will this be working?
+    # implemented as a one-liner
     lines = open(path, 'r').read().split('\n')
     return lines
 
@@ -37,7 +37,7 @@ def write_file_list(file_list: List[str], path: str) -> None:
     with open(path, 'w') as f:
         for file in file_list:
             f.write(file + '\n')
-            
+
 if __name__ == "__main__":
     path = './'
     german_path = './german.txt'
